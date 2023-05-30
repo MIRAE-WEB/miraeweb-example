@@ -3,9 +3,14 @@
  * and launch() the Application class.
  */
 Ext.application({
-    extend: 'MyApp.Application',
-
+    extend: 'Ext.app.Application',
     name: 'MyApp',
+    quickTips: false,
+    platformConfig: {
+        desktop: {
+            quickTips: true
+        }
+    },
 
     requires: [
         // This will automatically load all classes in the MyApp namespace
@@ -14,5 +19,12 @@ Ext.application({
     ],
 
     // The name of the initial view to create.
-    mainView: 'MyApp.view.main.Main'
+    //mainView: 'MyApp.view.hr.user.UserManagement',
+    launch : function(){
+
+        //로그인이 되었을때
+
+        Ext.widget('global-main');
+
+    }
 });
