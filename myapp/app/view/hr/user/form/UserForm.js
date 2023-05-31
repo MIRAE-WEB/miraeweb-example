@@ -4,6 +4,8 @@ Ext.define('MyApp.view.hr.user.form.UserForm',{
     alias : 'widget.user-form',
     requires: [
         'Ext.data.Store',
+        'Ext.data.proxy.Ajax',
+        'Ext.data.reader.Json',
         'Ext.form.FieldContainer',
         'Ext.form.field.ComboBox',
         'Ext.form.field.Date',
@@ -11,7 +13,8 @@ Ext.define('MyApp.view.hr.user.form.UserForm',{
         'Ext.form.field.Text',
         'Ext.layout.container.Column',
         'Ext.layout.container.HBox',
-        'MyApp.view.hr.user.form.UserFormController'
+        'MyApp.view.hr.user.form.UserFormController',
+        'MyApp.view.widget.CodeCombo'
     ],
     layout : 'column',
     controller: 'user-form',
@@ -64,28 +67,13 @@ Ext.define('MyApp.view.hr.user.form.UserForm',{
         vtype :'email',
         vtypeText : '이메일 양식이 잘못되었습니다'
     },{
-        xtype : 'combobox',
+        xtype : 'code-combo',
         fieldLabel : '부서',
-        queryMode : 'local',
-        store : Ext.create('Ext.data.Store',{
-            data :[
-                {code:'deptCode', codeName : '부서'}
-            ]
-        }),
-        valueField: 'code',
-        displayField : 'codeName',
+        codeGroup : 'DEPT_CODE',
     },{
-        xtype : 'combobox',
+        xtype : 'code-combo',
         fieldLabel : '직급',
-        queryMode : 'local',
-        store : Ext.create('Ext.data.Store',{
-            data :[
-                {code:'rankCode', codeName : '직급'}
-            ]
-        }),
-        valueField: 'code',
-        displayField : 'codeName',
-
+        codeGroup : 'RANK_CODE',
     },{
         xtype : 'textfield',
         allowBlank : true,

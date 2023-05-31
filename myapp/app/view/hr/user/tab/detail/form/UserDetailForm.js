@@ -4,12 +4,17 @@ Ext.define('MyApp.view.hr.user.tab.detail.form.UserDetailForm',{
     alias : 'widget.user-detail-form',
     requires: [
         'Ext.button.Button',
+        'Ext.data.Store',
+        'Ext.data.proxy.Ajax',
+        'Ext.data.reader.Json',
         'Ext.form.FieldContainer',
         'Ext.form.FieldSet',
+        'Ext.form.field.ComboBox',
         'Ext.form.field.Text',
         'Ext.layout.container.HBox',
         'Ext.layout.container.VBox',
-        'MyApp.view.hr.user.tab.detail.form.UserDetailFormController'
+        'MyApp.view.hr.user.tab.detail.form.UserDetailFormController',
+        'MyApp.view.widget.CodeCombo'
     ],
 
     controller: 'user-detail-form',
@@ -37,8 +42,9 @@ Ext.define('MyApp.view.hr.user.tab.detail.form.UserDetailForm',{
             margin : '0 20 10 10'
         },
         items : [{
-            xtype : 'textfield',
-            fieldLabel: '은행'
+            xtype : 'code-combo',
+            fieldLabel : '은행',
+            codeGroup : 'BANK_CODE',
         },{
             xtype : 'textfield',
             fieldLabel: '계좌'
