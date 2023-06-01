@@ -16,12 +16,14 @@ Ext.define('MyApp.view.hr.user.grid.UserGrid',{
         fieldLabel : '검색조건'
     },{
         xtype : 'button',
-        text : '조회'
+        text : '조회',
+        handler : 'onBtnSearch'
     },{
         xtype : 'tbfill'
     },{
         xtype : 'button',
-        text : '삭제'
+        text : '삭제',
+        handler : 'onBtnDelete'
     }],
     bind : '{userStore}',
     columns : [

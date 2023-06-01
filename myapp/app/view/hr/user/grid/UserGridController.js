@@ -35,6 +35,44 @@ Ext.define('MyApp.view.hr.user.grid.UserGridController', {
             }
         });
 
+    },
+    onBtnSearch : function(button){
+
+        var content = this.getView().up('user-management');
+
+        content.down('user-grid').getSelectionModel().deselectAll();
+        content.down('user-form').reset();
+
+        //UserTab
+        content.down('user-detail-form').reset();
+        content.down('user-career-grid').getStore().removeAll();
+        content.down('user-education-grid').getStore().removeAll();
+
+        this.getView().getStore().load();
+    },
+    onBtnDelete : function(button){
+        var rec = this.getView().getSelectionModel().getSelection()[0];
+
+        if(!rec){
+            Ext.Msg.alert('확인','선택된 데이터가 없습니다.');
+            return;
+        }
+
+        Ext.Msg.confirm('확인','삭제하시겠습니까?',function(btn){
+            if(btn=='yes'){
+
+                Ext.Ajax.request({
+                    url : 'userDelete',
+                    method : 'DELETE',
+                    params : {
+                        userIdx : rec.get('userIdx')
+                    }
+                })
+            }
+
+        });
+
+
     }
 
 });

@@ -3,6 +3,7 @@ Ext.define('MyApp.view.hr.user.form.UserForm',{
     extend: 'Ext.form.Panel',
     alias : 'widget.user-form',
     requires: [
+        'Ext.button.Button',
         'Ext.data.Store',
         'Ext.data.proxy.Ajax',
         'Ext.data.reader.Json',
@@ -13,6 +14,7 @@ Ext.define('MyApp.view.hr.user.form.UserForm',{
         'Ext.form.field.Text',
         'Ext.layout.container.Column',
         'Ext.layout.container.HBox',
+        'Ext.toolbar.Fill',
         'MyApp.view.hr.user.form.UserFormController',
         'MyApp.view.widget.CodeCombo'
     ],
@@ -25,6 +27,17 @@ Ext.define('MyApp.view.hr.user.form.UserForm',{
         allowBlank : false,
         margin : '0 20 10 10'
     },
+    tbar : [{
+        xtype : 'tbfill'
+    },{
+        xtype : 'button',
+        text : '신규',
+        handler : 'onBtnNew'
+    },{
+        xtype : 'button',
+        text : '저장',
+        handler : 'onBtnSave'
+    }],
     items : [{
         xtype : 'textfield',
         blankText : '아이디를 입력해 주세요',
