@@ -44,13 +44,16 @@ Ext.define('MyApp.view.hr.user.tab.detail.form.UserDetailForm',{
         items : [{
             xtype : 'code-combo',
             fieldLabel : '은행',
+            name : 'bankCode',
             codeGroup : 'BANK_CODE',
         },{
             xtype : 'textfield',
+            name : 'bankAccount',
             fieldLabel: '계좌'
         },{
             xtype : 'textfield',
-            fieldLabel: '예금주'
+            fieldLabel: '예금주',
+            name : 'ownerName'
         }]
     },{
         xtype : 'fieldset',
@@ -74,6 +77,7 @@ Ext.define('MyApp.view.hr.user.tab.detail.form.UserDetailForm',{
             },
             items : [{
                 xtype : 'textfield',
+                name : 'zipcode',
                 flex : 1,
             },{
                 xtype : 'button',
@@ -92,9 +96,11 @@ Ext.define('MyApp.view.hr.user.tab.detail.form.UserDetailForm',{
             items : [{
                 xtype : 'textfield',
                 margin : '0 10 0 0',
+                name : 'address1',
                 flex : 1,
             },{
                 xtype : 'textfield',
+                name : 'address2',
                 flex : 1,
             }]
         }]

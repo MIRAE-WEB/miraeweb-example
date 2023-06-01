@@ -28,9 +28,11 @@ Ext.define('MyApp.view.hr.user.form.UserForm',{
     items : [{
         xtype : 'textfield',
         blankText : '아이디를 입력해 주세요',
+        name : 'userId',
         fieldLabel : '아이디'
     },{
         xtype : 'textfield',
+        name : 'userName',
         fieldLabel : '성명'
     },{
         xtype : 'fieldcontainer',
@@ -53,30 +55,36 @@ Ext.define('MyApp.view.hr.user.form.UserForm',{
         },]
     },{
         xtype : 'datefield',
+        name : 'birthDate',
         format : 'Y-m-d',
         altFormats: 'Y-m-d|Ymd|Y.m.d',
         submitFormat : 'Ymd',
         fieldLabel : '생년월일'
     },{
         xtype : 'textfield',
+        name : 'mobile',
         fieldLabel : '핸드폰'
     },{
         xtype : 'textfield',
         fieldLabel : '이메일',
+        name : 'email',
         blankText : '이메일을 입력해 주세요',
         vtype :'email',
         vtypeText : '이메일 양식이 잘못되었습니다'
     },{
         xtype : 'code-combo',
         fieldLabel : '부서',
+        name : 'deptCode',
         codeGroup : 'DEPT_CODE',
     },{
         xtype : 'code-combo',
         fieldLabel : '직급',
+        name : 'rankCode',
         codeGroup : 'RANK_CODE',
     },{
         xtype : 'textfield',
         allowBlank : true,
+        name : 'employeeNumber',
         fieldLabel : '사번'
     }]
 });

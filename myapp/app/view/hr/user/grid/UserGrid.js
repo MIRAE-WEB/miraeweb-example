@@ -44,5 +44,7 @@ Ext.define('MyApp.view.hr.user.grid.UserGrid',{
 
         }},
         {text : '이메일', dataIndex:'email',flex:1},
-    ]
+    ],listeners : {
+        select : 'onSelect'
+    }
 });
