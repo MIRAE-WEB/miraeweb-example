@@ -10,5 +10,9 @@ Ext.define('MyApp.view.hr.user.tab.education.UserEducationTab',{
     layout : 'fit',
     items : [{
         xtype : 'user-education-grid'
-    }]
+    }],
+    listeners : {
+        'insert-mode' : 'onInsertMode',
+        'update-mode' : 'onUpdateMode'
+    }
 });

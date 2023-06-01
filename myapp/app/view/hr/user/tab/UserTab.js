@@ -19,5 +19,9 @@ Ext.define('MyApp.view.hr.user.tab.UserTab',{
     },{
         title : '학력정보',
         xtype : 'user-education-tab'
-    }]
+    }],
+    listeners : {
+        'insert-mode' : 'onInsertMode',
+        'update-mode' : 'onUpdateMode'
+    }
 });

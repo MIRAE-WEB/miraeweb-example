@@ -5,26 +5,16 @@ Ext.define('MyApp.view.hr.user.form.UserFormController', {
     onBtnNew: function (button) {
 
         var content = this.getView().up('user-management');
-
         content.down('user-grid').getSelectionModel().deselectAll();
-        content.down('user-form').reset();
 
-        //UserTab
-        content.down('user-detail-form').reset();
-        content.down('user-career-grid').getStore().removeAll();
-        content.down('user-education-grid').getStore().removeAll();
+        content.fireEvent('insert-mode');
+
 
     },
     onBtnSave : function(button){
         var content = this.getView().up('user-management');
 
-        var rec = content.down('user-grid').getSelectionModel().getSelection()[0];
-
-        var userIdx = null;
-
-        if(rec){
-            userIdx = rec.get('userIdx');
-        }
+        var userIdx = this.getView().lookupViewModel().get('userIdx');
 
         var userForm = content.down('user-form');
         var userDetailForm = content.down('user-detail-form');
@@ -70,13 +60,6 @@ Ext.define('MyApp.view.hr.user.form.UserFormController', {
                 }
 
             });
-
-
-
         }
-
-
-
-
     }
 });
