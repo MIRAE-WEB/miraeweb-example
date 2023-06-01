@@ -7,6 +7,8 @@ Ext.define('MyApp.view.hr.user.tab.education.UserEducationTab',{
     ],
 
     controller: 'user-education-tab',
-
-    html: 'Hello, World!!'
+    layout : 'fit',
+    items : [{
+        xtype : 'user-education-grid'
+    }]
 });

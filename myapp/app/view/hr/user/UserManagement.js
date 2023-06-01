@@ -27,6 +27,12 @@ Ext.define('MyApp.view.hr.user.UserManagement',{
                         rootProperty : 'users'
                     }
                 },
+            },
+            userEducationStore : {
+                type : 'store'
+            },
+            userCareerStore : {
+                type : 'store'
             }
         }
     },

@@ -8,7 +8,7 @@ Ext.define('MyApp.view.hr.user.tab.UserTab',{
         'MyApp.view.hr.user.tab.detail.UserDetailTab',
         'MyApp.view.hr.user.tab.education.UserEducationTab'
     ],
-
+    deferredRender : false,
     controller: 'user-tab',
     items : [{
         title : '상세정보',

@@ -7,7 +7,8 @@ Ext.define('MyApp.view.hr.user.tab.career.UserCareerTab',{
     ],
 
     controller: 'user-career-tab',
-
-
-    html: 'Hello, World!!'
+    layout : 'fit',
+    items : [{
+        xtype : 'user-career-grid'
+    }]
 });
