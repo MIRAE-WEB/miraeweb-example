@@ -48,7 +48,7 @@ Ext.define('MyApp.view.hr.user.UserManagement',{
         title : '사용자리스트',
         frame : true,
         margin : '0 0 10 0',
-        flex : 1
+        height : 300
     },{
         xtype : 'user-form',
         title : '사용자 정보',
