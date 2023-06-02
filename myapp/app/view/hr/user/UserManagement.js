@@ -1,6 +1,6 @@
 
 Ext.define('MyApp.view.hr.user.UserManagement',{
-    extend: 'MyApp.view.global.content.GlobalContent',
+    extend: 'MiraewebTheme.view.global.content.GlobalContent',
     alias : 'widget.user-management',
     requires: [
         'Ext.data.Store',

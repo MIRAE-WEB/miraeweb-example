@@ -4,17 +4,13 @@ Ext.define('MyApp.view.hr.user.tab.detail.form.UserDetailForm',{
     alias : 'widget.user-detail-form',
     requires: [
         'Ext.button.Button',
-        'Ext.data.Store',
-        'Ext.data.proxy.Ajax',
-        'Ext.data.reader.Json',
         'Ext.form.FieldContainer',
         'Ext.form.FieldSet',
-        'Ext.form.field.ComboBox',
         'Ext.form.field.Text',
         'Ext.layout.container.HBox',
         'Ext.layout.container.VBox',
-        'MyApp.view.hr.user.tab.detail.form.UserDetailFormController',
-        'MyApp.view.widget.CodeCombo'
+        'Miraeweb.form.field.CodeCombo',
+        'MyApp.view.hr.user.tab.detail.form.UserDetailFormController'
     ],
 
     controller: 'user-detail-form',

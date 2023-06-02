@@ -4,19 +4,15 @@ Ext.define('MyApp.view.hr.user.form.UserForm',{
     alias : 'widget.user-form',
     requires: [
         'Ext.button.Button',
-        'Ext.data.Store',
-        'Ext.data.proxy.Ajax',
-        'Ext.data.reader.Json',
         'Ext.form.FieldContainer',
-        'Ext.form.field.ComboBox',
         'Ext.form.field.Date',
         'Ext.form.field.Radio',
         'Ext.form.field.Text',
         'Ext.layout.container.Column',
         'Ext.layout.container.HBox',
         'Ext.toolbar.Fill',
-        'MyApp.view.hr.user.form.UserFormController',
-        'MyApp.view.widget.CodeCombo'
+        'Miraeweb.form.field.CodeCombo',
+        'MyApp.view.hr.user.form.UserFormController'
     ],
     layout : 'column',
     controller: 'user-form',

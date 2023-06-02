@@ -1,0 +1,5 @@
+Ext.define('MiraewebTheme.view.global.center.GlobalCenterController', {
+    extend: 'Ext.app.ViewController',
+    alias: 'controller.global-center'
+
+});

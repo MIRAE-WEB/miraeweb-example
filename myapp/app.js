@@ -11,7 +11,14 @@ Ext.application({
             quickTips: true
         }
     },
+    defaultToken :'user-management',
 
+    controllers : [
+        'MiraewebTheme.controller.MenuController'
+    ],
+    stores : [
+        'MiraewebTheme.store.Navigation'
+    ],
     requires: [
         // This will automatically load all classes in the MyApp namespace
         // so that application classes do not need to require each other.
@@ -23,6 +30,9 @@ Ext.application({
     launch : function(){
 
         //로그인이 되었을때
+
+        Ext.getStore('Navigation').dataLoad();
+
 
         Ext.widget('global-main');
 
