@@ -1,6 +1,6 @@
 
 Ext.define('MyApp.view.hr.user.UserManagement',{
-    extend: 'Ext.panel.Panel',
+    extend: 'MyApp.view.global.content.GlobalContent',
     alias : 'widget.user-management',
     requires: [
         'Ext.data.Store',
@@ -46,13 +46,18 @@ Ext.define('MyApp.view.hr.user.UserManagement',{
     items : [{
         xtype : 'user-grid',
         title : '사용자리스트',
+        frame : true,
+        margin : '0 0 10 0',
         flex : 1
     },{
         xtype : 'user-form',
         title : '사용자 정보',
+        margin : '0 0 10 0',
+        frame : true
     },{
         xtype : 'user-tab',
-        flex : 1
+        minHeight : 300,
+        frame : true
     }],
     listeners : {
         'insert-mode' : 'onInsertMode',
